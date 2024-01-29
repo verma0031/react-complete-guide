@@ -1,18 +1,23 @@
-import React from 'react';
+import React from "react";
+import './ExpenseItem.css'
 
-function ExpenseItem(){
-    return (
-        <>
-        <header>
-            <h1>Expense Items !!</h1>
-        </header>
+// const expenseDate = new Date(2021, 2, 28);
+// const expenseAmount = 267.66;
+// const expenseTitle = 'CarInsurance';
+// const locationOfExpenditure = 'Germany';
 
-        <h2>Food Rs 10</h2>
-        <h2>Petrol Rs 100</h2>
-        <h2>Movie Rs 200</h2>
-        
-        </>
-    )
+function ExpenseItem(props) {
+  return (
+    <div className="expense-item">
+        <div>{props.date.toDateString()}</div>
+
+        <div className="expense-item__description">
+            <h2>{props.location}</h2>
+            <h2>{props.title}</h2>
+            <div className="expense-item__price">${props.amount}</div>
+        </div>
+    </div>
+  );
 }
 
 export default ExpenseItem;
