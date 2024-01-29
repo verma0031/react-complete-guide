@@ -1,5 +1,7 @@
 import React from "react";
-import './ExpenseItem.css'
+import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
 
 // const expenseDate = new Date(2021, 2, 28);
 // const expenseAmount = 267.66;
@@ -9,13 +11,10 @@ import './ExpenseItem.css'
 function ExpenseItem(props) {
   return (
     <div className="expense-item">
-        <div>{props.date.toDateString()}</div>
-
-        <div className="expense-item__description">
-            <h2>{props.location}</h2>
-            <h2>{props.title}</h2>
-            <div className="expense-item__price">${props.amount}</div>
-        </div>
+      <ExpenseDate date={props.date}></ExpenseDate>
+      <div className="expense-item__description">
+        <ExpenseDetails title={props.title} location={props.location} amount={props.amount}></ExpenseDetails>
+      </div>
     </div>
   );
 }
