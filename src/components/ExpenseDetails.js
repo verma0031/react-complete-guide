@@ -3,11 +3,11 @@ import "./ExpenseItem.css";
 
 function ExpenseDetails(props) {
   return (
-    <div>
-      <div className="expense-item__description">
+    <div >
+      <div>
         {props.title}
         <h2>{props.location}</h2>
-        <div className="expense-item__price">${props.amount}</div>
+        <div>${props.amount}</div>
       </div>
     </div>
   );
