@@ -1,4 +1,5 @@
 import React from 'react';
+import './ExpenseDate.css';
 
 function expenseDate(props) {
   const month = props.date.toLocaleString("en-US", { month: "long" });
