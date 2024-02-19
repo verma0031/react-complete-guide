@@ -14,7 +14,9 @@ const ExpenseItem = (props) => {
     //   expenseItem.parentNode.removeChild(expenseItem);
     // }
 
+    
     event.target.parentElement.remove();
+    alert("Expense Deleted");
   };
   return (
     <Card className="expense-item">
